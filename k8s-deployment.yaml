@@ -15,10 +15,12 @@ spec:
       labels:
         app: kashif-website
     spec:
+      imagePullSecrets:
+      - name: ghcr-secret
       containers:
       - name: kashif-website
         image: ghcr.io/adeelirshad512/kashif-portfolio:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         resources:
