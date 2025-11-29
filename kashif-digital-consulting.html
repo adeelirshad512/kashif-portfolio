@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashif Hussain - Digital Maven | Strategic Social Media Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a1f36;
+            --gold: #FFD700;
+            --accent-gold: #FFA500;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --medium-gray: #E9ECEF;
+            --dark-gray: #495057;
+            --text-black: #212529;
+            --gradient: linear-gradient(135deg, var(--primary-navy) 0%, #2d3561 100%);
+            --shadow-sm: 0 2px 15px rgba(0,0,0,0.08);
+            --shadow-md: 0 8px 40px rgba(0,0,0,0.12);
+            --shadow-lg: 0 20px 80px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: var(--text-black);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0 30px;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .logo i {
+            margin-right: 12px;
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-black);
+            font-weight: 400;
+            font-size: 15px;
+            font-family: 'Lato', sans-serif;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: var(--gradient);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: var(--primary-navy);
+            padding: 8px 20px;
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-badge i {
+            margin-right: 8px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            color: var(--white);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--primary-navy);
+            border: none;
+            padding: 18px 40px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 16px 36px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-navy);
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-navy);
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--dark-gray);
+        }
+
+        .expertise-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .expertise-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .expertise-item i {
+            font-size: 24px;
+            color: var(--gold);
+            margin-right: 20px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .expertise-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--primary-navy);
+        }
+
+        .expertise-content p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: var(--dark-gray);
+        }
+
+        .about-image {
+            position: relative;
+            height: 600px;
+            background: var(--gradient);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-content {
+            text-align: center;
+            color: var(--white);
+            padding: 40px;
+        }
+
+        .about-image-content i {
+            font-size: 80px;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .about-image-content h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-image-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-navy);
+        }
+
+        .section-header p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 50px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--medium-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .service-icon i {
+            font-size: 32px;
+            color: var(--gold);
+        }
+
+        .service-card h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-navy);
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: var(--dark-gray);
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: var(--text-black);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        /* ROI Calculator Section */
+        .roi-calculator {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 60px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .calculator-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-navy);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .calc-input-group {
+            margin-bottom: 25px;
+        }
+
+        .calc-input-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calc-input-group input,
+        .calc-input-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .calc-input-group input:focus,
+        .calc-input-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .results {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            display: none;
+        }
+
+        .results h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-navy);
+        }
+
+        .result-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+        }
+
+        .result-item strong {
+            color: var(--gold);
+            font-size: 20px;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            padding: 100px 0;
+            background: var(--gradient);
+            color: var(--white);
+        }
+
+        .methodology-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gold);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            z-index: 2;
+        }
+
+        .timeline-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .timeline-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-navy);
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: var(--dark-gray);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            background: var(--light-gray);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: var(--gradient);
+            color: var(--white);
+            transform: translateX(10px);
+        }
+
+        .contact-method i {
+            font-size: 24px;
+            color: var(--gold);
+            margin-right: 20px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-method:hover i {
+            color: var(--white);
+        }
+
+        .contact-method-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: inherit;
+        }
+
+        .contact-method-content p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: inherit;
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 50px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 18px;
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .about-grid,
+            .contact-grid,
+            .calculator-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                Digital Maven
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#roi">ROI Calculator</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    Premier Social Media Consulting
+                </div>
+                <h1>Strategic Social Media Excellence</h1>
+                <p class="hero-subtitle">Data-driven strategies that deliver measurable ROI and transform your digital presence</p>
+                <p class="hero-description">
+                    With over 5 years of expertise in social media management and digital marketing,
+                    I help businesses build powerful online communities, drive engagement, and achieve
+                    sustainable growth through strategic social media initiatives.
+                </p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Schedule Consultation
+                    </a>
+                    <a href="#roi" class="btn-secondary">
+                        <i class="fas fa-calculator"></i>
+                        Calculate ROI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Expert Social Media Strategy</h2>
+                    <p>
+                        Kashif Hussain is a seasoned social media consultant specializing in developing
+                        comprehensive digital strategies that drive business growth. With a proven track
+                        record of success across various industries, I bring deep expertise in content
+                        strategy, community management, and performance optimization.
+                    </p>
+                    <p>
+                        My approach combines analytical rigor with creative excellence, ensuring that
+                        every social media initiative is aligned with your business objectives and
+                        delivers measurable results.
+                    </p>
+                    <ul class="expertise-list">
+                        <li class="expertise-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="expertise-content">
+                                <h4>ROI-Focused Campaigns</h4>
+                                <p>Strategic campaigns designed to maximize return on investment and achieve business objectives</p>
+                            </div>
+                        </li>
+                        <li class="expertise-item">
+                            <i class="fas fa-users"></i>
+                            <div class="expertise-content">
+                                <h4>Community Building</h4>
+                                <p>Develop engaged communities around your brand that drive loyalty and advocacy</p>
+                            </div>
+                        </li>
+                        <li class="expertise-item">
+                            <i class="fas fa-brain"></i>
+                            <div class="expertise-content">
+                                <h4>Strategic Planning</h4>
+                                <p>Comprehensive social media strategies aligned with your overall marketing objectives</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-content">
+                        <i class="fas fa-medal"></i>
+                        <h3>5+ Years Excellence</h3>
+                        <p>Trusted by businesses worldwide for strategic social media consulting and implementation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Consulting Services</h2>
+                <p>
+                    Comprehensive social media consulting services designed to elevate your brand
+                    and drive measurable business results
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Social Strategy Development</h3>
+                    <p>
+                        Comprehensive social media strategy development including audience research,
+                        competitive analysis, content planning, and performance metrics definition.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Audience Research & Analysis</li>
+                        <li><i class="fas fa-check"></i> Competitive Landscape Analysis</li>
+                        <li><i class="fas fa-check"></i> Content Strategy Development</li>
+                        <li><i class="fas fa-check"></i> Performance KPI Definition</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>
+                        Data-driven optimization of social media performance through A/B testing,
+                        analytics interpretation, and continuous improvement strategies.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Advanced Analytics & Reporting</li>
+                        <li><i class="fas fa-check"></i> A/B Testing & Optimization</li>
+                        <li><i class="fas fa-check"></i> ROI Tracking & Analysis</li>
+                        <li><i class="fas fa-check"></i> Continuous Improvement</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Brand Partnerships</h3>
+                    <p>
+                        Strategic brand partnership development and influencer collaboration management
+                        to expand reach and build brand credibility.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Influencer Identification</li>
+                        <li><i class="fas fa-check"></i> Partnership Negotiation</li>
+                        <li><i class="fas fa-check"></i> Campaign Management</li>
+                        <li><i class="fas fa-check"></i> Performance Tracking</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Team Training & Consulting</h3>
+                    <p>
+                        Comprehensive training programs and ongoing consulting for in-house social
+                        media teams to enhance capabilities and performance.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Team Skill Assessment</li>
+                        <li><i class="fas fa-check"></i> Custom Training Programs</li>
+                        <li><i class="fas fa-check"></i> Best Practice Implementation</li>
+                        <li><i class="fas fa-check"></i> Ongoing Mentoring</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Social Media Audit</h3>
+                    <p>
+                        Comprehensive audit of existing social media presence with actionable
+                        recommendations for improvement and growth optimization.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Platform Performance Analysis</li>
+                        <li><i class="fas fa-check"></i> Content Quality Assessment</li>
+                        <li><i class="fas fa-check"></i> Competitive Benchmarking</li>
+                        <li><i class="fas fa-check"></i> Growth Opportunity Identification</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Growth Strategy</h3>
+                    <p>
+                        Strategic growth planning and execution to expand your social media reach,
+                        increase engagement, and drive business objectives.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Growth Channel Identification</li>
+                        <li><i class="fas fa-check"></i> Scalable Strategy Development</li>
+                        <li><i class="fas fa-check"></i> Resource Optimization</li>
+                        <li><i class="fas fa-check"></i> Performance Scaling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="roi-calculator" id="roi">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h2>Social Media ROI Calculator</h2>
+                    <p>Estimate your potential return on investment with strategic social media management</p>
+                </div>
+
+                <div class="calculator-grid">
+                    <div>
+                        <div class="calc-input-group">
+                            <label for="budget">Monthly Social Media Budget ($)</label>
+                            <input type="number" id="budget" placeholder="5000" value="5000">
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="industry">Industry Type</label>
+                            <select id="industry">
+                                <option value="retail">Retail/E-commerce</option>
+                                <option value="b2b">B2B Services</option>
+                                <option value="restaurant">Restaurant/Food</option>
+                                <option value="tech">Technology</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="followers">Current Social Media Followers</label>
+                            <input type="number" id="followers" placeholder="10000" value="10000">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calc-input-group">
+                            <label for="goals">Primary Goal</label>
+                            <select id="goals">
+                                <option value="awareness">Brand Awareness</option>
+                                <option value="leads">Lead Generation</option>
+                                <option value="sales">Direct Sales</option>
+                                <option value="engagement">Community Engagement</option>
+                            </select>
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="duration">Campaign Duration (months)</label>
+                            <input type="number" id="duration" placeholder="6" value="6">
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="platforms">Number of Platforms</label>
+                            <select id="platforms">
+                                <option value="1">1 Platform</option>
+                                <option value="2">2 Platforms</option>
+                                <option value="3">3 Platforms</option>
+                                <option value="4">4+ Platforms</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="calculate-btn" onclick="calculateROI()">
+                    Calculate Potential ROI
+                </button>
+
+                <div class="results" id="results">
+                    <h3>Your Potential ROI Analysis</h3>
+                    <div class="result-item">
+                        <strong>Projected Revenue Increase:</strong>
+                        <span id="revenue-increase">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Expected ROI:</strong>
+                        <span id="roi-percentage">0%</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Projected Follower Growth:</strong>
+                        <span id="follower-growth">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology" id="methodology">
+        <div class="container">
+            <div class="methodology-content">
+                <div class="section-header">
+                    <h2 style="color: white;">Strategic Methodology</h2>
+                    <p style="color: rgba(255,255,255,0.9);">Our proven 4-phase approach to social media excellence</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Research & Analysis</h3>
+                            <p>
+                                Comprehensive analysis of your current social media presence, competitor landscape,
+                                and target audience insights to establish baseline metrics and identify opportunities.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Strategy Development</h3>
+                            <p>
+                                Customized social media strategy development including content planning,
+                                platform selection, messaging framework, and performance KPI definition.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Implementation & Management</h3>
+                            <p>
+                                Strategic execution of social media campaigns with ongoing management,
+                                content creation, community engagement, and performance monitoring.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Optimization & Scaling</h3>
+                            <p>
+                                Continuous analysis, A/B testing, and optimization of strategies to
+                                improve performance and scale successful initiatives for maximum ROI.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Begin Your Digital Transformation</h2>
+                        <p>
+                            Ready to elevate your social media presence and drive measurable business results?
+                            Schedule a consultation to discuss how strategic social media management can
+                            transform your brand's digital footprint.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-method-content">
+                                    <h4>Email</h4>
+                                    <p>Kashifhussain6490@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-method-content">
+                                    <h4>Phone</h4>
+                                    <p>+923460070130</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-method-content">
+                                    <h4>Location</h4>
+                                    <p>Darya Khan, Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <i class="fas fa-clock"></i>
+                                <div class="contact-method-content">
+                                    <h4>Availability</h4>
+                                    <p>24/7 Client Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 30px; color: var(--primary-navy);">Schedule Consultation</h3>
+                        <form id="consultationForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project">Project Details</label>
+                                <textarea id="project" name="project" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                Request Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital Maven</h3>
+                    <p>
+                        Premier social media consulting service delivering strategic solutions
+                        that drive measurable business results and sustainable growth.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Expertise</h3>
+                    <ul>
+                        <li>Social Media Strategy</li>
+                        <li>Performance Optimization</li>
+                        <li>Community Management</li>
+                        <li>Brand Partnerships</li>
+                        <li>Team Training & Consulting</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Industries Served</h3>
+                    <ul>
+                        <li>E-commerce & Retail</li>
+                        <li>B2B Services</li>
+                        <li>Technology</li>
+                        <li>Healthcare</li>
+                        <li>Food & Restaurant</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><strong>Email:</strong> Kashifhussain6490@gmail.com</li>
+                        <li><strong>Phone:</strong> +923460070130</li>
+                        <li><strong>Location:</strong> Darya Khan, Pakistan</li>
+                        <li><strong>Experience:</strong> 5+ Years</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kashif Hussain - Digital Maven. All rights reserved. | Strategic Social Media Consulting</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ROI Calculator
+        function calculateROI() {
+            const budget = parseFloat(document.getElementById('budget').value) || 5000;
+            const industry = document.getElementById('industry').value;
+            const followers = parseFloat(document.getElementById('followers').value) || 10000;
+            const goals = document.getElementById('goals').value;
+            const duration = parseFloat(document.getElementById('duration').value) || 6;
+            const platforms = parseFloat(document.getElementById('platforms').value);
+
+            // Industry multipliers
+            const industryMultipliers = {
+                'retail': 4.5,
+                'b2b': 3.2,
+                'restaurant': 3.8,
+                'tech': 5.1,
+                'healthcare': 2.9,
+                'other': 3.5
+            };
+
+            // Goal multipliers
+            const goalMultipliers = {
+                'awareness': 1.2,
+                'leads': 1.8,
+                'sales': 2.1,
+                'engagement': 1.5
+            };
+
+            // Calculate projected results
+            const industryMultiplier = industryMultipliers[industry];
+            const goalMultiplier = goalMultipliers[goals];
+            const platformMultiplier = 1 + (platforms * 0.15);
+
+            const totalInvestment = budget * duration;
+            const projectedRevenue = totalInvestment * industryMultiplier * goalMultiplier * platformMultiplier;
+            const roi = ((projectedRevenue - totalInvestment) / totalInvestment) * 100;
+            const followerGrowthRate = 0.15 * platformMultiplier * goalMultiplier;
+            const projectedFollowers = followers * Math.pow(1 + followerGrowthRate, duration);
+
+            // Display results
+            document.getElementById('revenue-increase').textContent = '$' + projectedRevenue.toLocaleString(undefined, {maximumFractionDigits: 0});
+            document.getElementById('roi-percentage').textContent = roi.toFixed(0) + '%';
+            document.getElementById('follower-growth').textContent = Math.floor(projectedFollowers).toLocaleString();
+
+            document.getElementById('results').style.display = 'block';
+
+            // Smooth scroll to results
+            document.getElementById('results').scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+
+        // Consultation form handling
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Show success message
+            alert('Thank you for your consultation request! I will contact you within 24 hours to schedule your strategy session.');
+            this.reset();
+        });
+
+        // Scroll effects
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255,255,255,1)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255,255,255,0.98)';
+                navbar.style.boxShadow = '0 1px 0 rgba(0,0,0,0.05)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and timeline items
+        document.querySelectorAll('.service-card, .timeline-item, .contact-method').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

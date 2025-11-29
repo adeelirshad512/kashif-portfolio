@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kashif-website
+  namespace: kashif-portfolio
+  labels:
+    app: kashif-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kashif-website
+  template:
+    metadata:
+      labels:
+        app: kashif-website
+    spec:
+      containers:
+      - name: kashif-website
+        image: ghcr.io/adeelirshad512/kashif-portfolio:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
